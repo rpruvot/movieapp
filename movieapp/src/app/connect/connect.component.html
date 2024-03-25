@@ -45,12 +45,10 @@
 
 <body>
 <div class = "container">
-    <form class="login-form">
-        <input type="text" [(ngModel)]="user.email" placeholder="Nom d'utilisateur">
-        <br>
-        <input type="password" [(ngModel)]="user.password" placeholder="Mot de passe">
-    </form>
-    <button mat-raised-button style="width : 200px" (click)="connection()">Se Connecter</button><br><br>    
-    <button mat-raised-button style="width : 200px" color="primary" [routerLink]="'/createaccount'">Créer un Compte</button>
+    <form>
+        <input type="email" name="email" [(ngModel)]="user.email" placeholder="Adresse e-mail" required>
+        <input type="password" name="motdepasse" [(ngModel)]="user.password" placeholder="Mot de passe" required>
+        <input type="submit" value="Se connecter" (click)="connection()">      
+      </form>
 </div>
 </body> 

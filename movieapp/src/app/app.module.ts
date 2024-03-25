@@ -15,6 +15,7 @@ import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ConnectComponent } from './connect/connect.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { FormsModule } from '@angular/forms';
+import { DisconnectComponent } from './disconnect/disconnect.component';
 
 //note : redemarrez le compiler 
 
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     AcceuilComponent,
     ConnectComponent,
-    CreateaccountComponent
+    CreateaccountComponent,
+    DisconnectComponent
   ],
   imports: [
     BrowserModule,
