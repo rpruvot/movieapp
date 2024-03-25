@@ -12,7 +12,7 @@ import firebase from 'firebase/app';
 
 export class AppComponent { 
   title = 'movieapp';
-  public connect_state : boolean = false;
+  public connect_state : boolean = true;
   public updateConnectState(state:boolean){
     this.connect_state = state;
   } 
