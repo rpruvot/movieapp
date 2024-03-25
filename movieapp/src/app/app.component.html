@@ -191,7 +191,7 @@
       <mat-icon>share</mat-icon>
     </button>
     <span class="fill-space"></span>
-    <button mat-button [routerLink]="'connect'">{{connect_state ? 'Se Déconnecter' : 'Se Connecter' }}</button>
+    <button mat-button [routerLink]="connect_state ? null : 'connect'" (click)="connect_state ? disconnect() : null">{{connect_state ? 'Se Déconnecter' : 'Se Connecter' }}</button>
   </mat-toolbar>
 </header>
 <router-outlet>

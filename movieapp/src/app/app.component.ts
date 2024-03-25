@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { getAuth } from '@angular/fire/auth';
+import { getAuth, signOut } from '@angular/fire/auth';
 import firebase from 'firebase/app';
 
 @Component({
@@ -13,7 +13,22 @@ import firebase from 'firebase/app';
 export class AppComponent { 
   title = 'movieapp';
   public connect_state : boolean = true;
-  public updateConnectState(state:boolean){
-    this.connect_state = state;
+
+  getStatus(){
+   const auth = getAuth();
+   if(auth.currentUser){
+    this.connect_state = true;
+   }else{
+    this.connect_state = false
+   }
+  }
+  disconnect(){
+    const auth = getAuth();
+    console.log("Déconnection")
+    signOut(auth).then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+    });
   } 
 }
