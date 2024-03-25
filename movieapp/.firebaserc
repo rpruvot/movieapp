@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "projetweb-92fe6": {
+      "hosting": {
+        "movieapp": [
+          "projetweb-92fe6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "projetweb-92fe6"
+  }
+}
