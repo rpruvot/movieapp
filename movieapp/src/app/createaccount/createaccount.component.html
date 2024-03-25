@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Créer un compte</title>
 <style>
   body {
@@ -45,13 +41,11 @@
   }
 </style>
 </head>
-<body>
+
     <form>
-        <input type="text" name="nom" placeholder="Nom" required>
-        <input type="text" name="prenom" placeholder="Prénom" required>
-        <input type="email" name="email" placeholder="Adresse e-mail" required>
-        <input type="password" name="motdepasse" placeholder="Mot de passe" required>
-        <input type="submit" value="Créer un compte">
+      <input type="text" name="nom" [(ngModel)]="user.name" placeholder="Nom" required>
+      <input type="text" name="prenom" [(ngModel)]="user.firstname" placeholder="Prénom" required>
+      <input type="email" name="email" [(ngModel)]="user.email" placeholder="Adresse e-mail" required>
+      <input type="password" name="motdepasse" [(ngModel)]="user.password" placeholder="Mot de passe" required>
+      <input type="submit" value="Créer un compte" (click)="createUser()">      
     </form>
-</body>
-</html>

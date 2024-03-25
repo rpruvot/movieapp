@@ -46,11 +46,11 @@
 <body>
 <div class = "container">
     <form class="login-form">
-        <input type="text" placeholder="Nom d'utilisateur">
+        <input type="text" [(ngModel)]="user.email" placeholder="Nom d'utilisateur">
         <br>
-        <input type="password" placeholder="Mot de passe">
+        <input type="password" [(ngModel)]="user.password" placeholder="Mot de passe">
     </form>
-    <button mat-raised-button style="width : 200px"  [routerLink]="''">Se Connecter</button><br><br>    
+    <button mat-raised-button style="width : 200px" (click)="connection()">Se Connecter</button><br><br>    
     <button mat-raised-button style="width : 200px" color="primary" [routerLink]="'/createaccount'">Créer un Compte</button>
 </div>
 </body> 

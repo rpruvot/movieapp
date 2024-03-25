@@ -14,6 +14,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ConnectComponent } from './connect/connect.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { FormsModule } from '@angular/forms';
+
+//note : redemarrez le compiler 
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
     MatToolbarModule,
     MatButtonModule,
     MatDividerModule,
+    FormsModule,
     MatIconModule    
   ],
   providers: [
